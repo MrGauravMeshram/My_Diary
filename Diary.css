@@ -1,0 +1,183 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+.container{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:black
+}
+
+.book{
+    position:relative;
+    width:400px;
+    height:500px;
+    perspective:1500px;
+}
+.page{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgb(98,212,244);
+    border-radius:10px;
+    transform-origin:left;
+    transform-style:preserve-3d;
+    transition:transform 1s;
+    padding:20px;
+    z-index:0;
+}
+
+
+
+.cover{
+    position:absolute;
+    width:100%;
+     background:rgb(98,212,244);
+    height:100%;
+    /* background:rgb(97,46,46); */
+    border-radius:10px;
+    transform-origin:left;
+    transition:1s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 7;
+    padding: 20px;
+    
+}
+
+
+.book .turn{
+    transform:rotateY(-160deg);
+} 
+
+
+
+.cover input{
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px;
+
+}
+.cover .texts{
+    height: 80%;
+    width: 100%;
+    border-radius: 10px;
+
+}
+.box1{
+    height: 80px;
+    width: 100%;
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+  
+    align-items: center;
+    gap: 10px;
+}
+button{
+    height: 100%;
+    width: 100%;
+}
+.boxnew{
+    height: 130px;
+    width: 100%;
+    background-color: aliceblue;
+    border: 3px solid black;
+    margin-top: 10px;
+    overflow-wrap:break-word;
+    position: relative;
+}
+
+
+.page.turn{
+    transform:rotateY(-180deg);
+}
+
+.book{
+    position:relative;
+    width:400px;
+    height:500px;
+    perspective:2000px;
+}
+
+.page:nth-child(2){ z-index:5; }
+.page:nth-child(3){ z-index:4; }
+.page:nth-child(4){ z-index:3; }
+.page:nth-child(5){ z-index:2; }
+.page:nth-child(6){ z-index:1; }
+
+.page.active{
+    display:flex;
+}
+
+.nav{
+    margin-top:20px;
+    display:flex;
+    gap:20px;
+}
+.navigation{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.navigation button{
+    padding:8px 20px;
+    border:none;
+    background:#612e2e;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.ture{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgb(22, 22, 61);
+    border-radius:10px;
+    transform-origin:left;
+    transition:1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 6;
+    transition: all 0.3 linear;
+    padding: 20px;
+}
+button{
+    transform: rotate(360deg);
+}
+/* .back-in{
+    height: 95%;
+    width: 95%;
+    border: 10px;
+    background-color: white;
+} */
+.cover .dates{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:cursive;
+
+   
+}
+.time-text {
+    font-size: 12px;
+    color: gray;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
