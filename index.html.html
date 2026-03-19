@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Diary.css">
+
+<title>Diary</title>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="book">
+        <div class="cover">
+            <h3 style="text-align: left;">My Special Diary</h3>
+            <input type="datetime-local" class="dates" height="100px" width="100px">
+            <input type="text" placeholder="title" class="title">
+            <textarea class="texts"></textarea>
+            <div class="box1">
+                <button onclick="btn1()">Click to Save</button>
+                <button onclick="btn2()">Check the Diary</button>
+            </div>
+        </div>
+        <div id="cover2" class="ture">
+       <div class="back-in"></div>
+       
+          
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button onclick="prevPage()">Previous</button>
+        <button onclick="nextPage()">Next</button>
+    </div>
+
+</div>
+<script src="Diary.js" defer></script>
+</body>
+</html>
